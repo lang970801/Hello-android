@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Foodle</string>
+    <string name="home">首页</string>
+    <string name="foodie">美食</string>
+    <string name="merchant">商家</string>
+    <string name="my">我的</string>
+    <string name="hinttxt">请输入要搜索的内容</string>
+</resources>
