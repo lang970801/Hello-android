@@ -20,8 +20,8 @@ public class logoinActivity extends Activity{
     }
 
     private void init() {
-        remeTv=findViewById(R.id.remeTv);
-        Intent intent=new Intent(logoinActivity.this,RegisterActivity.class);
-        startActivity(intent);
+//        remeTv=findViewById(R.id.remeTv);
+//        Intent intent=new Intent(logoinActivity.this,RegisterActivity.class);
+//        startActivity(intent);
     }
 }
