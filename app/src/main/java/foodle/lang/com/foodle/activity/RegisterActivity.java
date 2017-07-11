@@ -12,9 +12,9 @@ import foodle.lang.com.foodle.R;
 import foodle.lang.com.foodle.utils.VolleyUtil;
 
 /**
- * Created by Administrator on 2017/6/25.
+ * Created by Administrator on 2017/7/11.
  */
-public class RegisterActivity extends Activity implements LoginCallBack, View.OnClickListener {
+public class RegisterActivity extends Activity implements View.OnClickListener {
     private static final String TAG="RegisterActivity";
     private EditText accountEdit, passwordEdit;
     private Button registerBt;
@@ -27,30 +27,16 @@ public class RegisterActivity extends Activity implements LoginCallBack, View.On
         setContentView(R.layout.registerlayout);
         init();
     }
-
     private void init() {
         registerBt_reg=findViewById(R.id.registerBt_reg);
         accountEdit_reg=findViewById(R.id.accountEdit_reg);
         passwordEdit=findViewById(R.id.passwordEdit);
-        registerBt.setOnClickListener(this);
 
     }
-
-
-    @Override
-    public void success(String info) {
-        Log.i(TAG,info);
-    }
-
-    @Override
-    public void errr(String error) {
-        Log.i(TAG,error);
-    }
-
     @Override
     public void onClick(View view) {
         String account= accountEdit_reg.getText().toString().trim();
         String password=accountEdit.getText().toString().trim();
-        VolleyUtil.logoin(account,password,RegisterActivity.this);
+//        VolleyUtil.logoin(account,password,RegisterActivity.this);
     }
 }

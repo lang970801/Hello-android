@@ -1,4 +1,14 @@
 <resources>
+    <string-array name="imgName">
+        <item> 预定座位</item>
+        <item>外卖</item>
+        <item>小吃快餐</item>
+        <item>港澳菜</item>
+        <item>火锅</item>
+        <item>自助餐</item>
+        <item>生日蛋糕</item>
+        <item>甜点饮品</item>
+    </string-array>
     <string name="app_name">Foodle</string>
     <string name="home">首页</string>
     <string name="foodie">美食</string>

@@ -9,6 +9,8 @@ import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -22,7 +24,6 @@ public class HomeFragment extends Fragment {
     private static final int VIEWPAGER = 0;
     private List<Map<String,Object>> list;
     private SimpleAdapter simpleAdapter;
-    private static final String PRCTURE_LATEST_PARAM = "param";
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (view == null) {
@@ -32,12 +33,21 @@ public class HomeFragment extends Fragment {
         return view;
     }
     private void init(View view) {
+        ininData();
         home_lv=view.findViewById(R.id.home_lv);
         img=view.findViewById(R.id.home_img);
-        home_lv=view.findViewById(R.id.home_lv);
         gv=view.findViewById(R.id.gv_layout);
-
     }
+
+    private void ininData() {
+        String[] imgNanme = getResources().getStringArray(R.array.imgName);
+        int[] img={R.mipmap.ic_dd,R.mipmap.ic_wm, R.mipmap.ic_xckc,R.mipmap.ic_gac, R.mipmap.ic_hg,R.mipmap.ic_zzc_pp,
+                R.mipmap.ic_srdg,R.mipmap.ic_tdyp,};
+        for (int i=0;i<imgNanme.length;i++){
+            Map<String,Object> map=new HashMap<String,Object>();
+        }
+    }
+
     @Override
     public void onDestroyView() {
         super.onDestroyView();
