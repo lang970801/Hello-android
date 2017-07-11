@@ -1,4 +1,5 @@
 package foodle.lang.com.foodle.fragments;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -7,14 +8,18 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import foodle.lang.com.foodle.R;
+import foodle.lang.com.foodle.activity.logoinActivity;
 
-public class HomeFragment extends Fragment {
+public class HomeFragment extends Fragment implements View.OnClickListener {
     private View view;
     private ListView home_lv;
     private String mParam;
+    private ImageView img;
     private static final int VIEWPAGER = 0;
     private static final String PRCTURE_LATEST_PARAM = "param";
 //    private Handler mhandler=new Handler(){
@@ -56,6 +61,8 @@ public class HomeFragment extends Fragment {
 
     private void init(View view) {
         home_lv=view.findViewById(R.id.home_lv);
+        img=view.findViewById(R.id.home_img);
+        img.setOnClickListener(this);
 
 //        SimpleAdapter adapter=new SimpleAdapter(view.getContext(),)
 //        home_lv.setAdapter(adapter);
@@ -67,5 +74,14 @@ public class HomeFragment extends Fragment {
         ((ViewGroup) view.getParent()).removeView(view);
     }
 
+    @Override
+    public void onClick(View view) {
+        switch (view.getId()){
+            case R.id.home_img:
+                Intent intent=new Intent(view.getContext(),logoinActivity.class);
+                startActivity(intent);
+                break;
+        }
+    }
 }
 

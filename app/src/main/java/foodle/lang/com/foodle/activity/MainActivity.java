@@ -1,4 +1,4 @@
-package foodle.lang.com.foodle;
+package foodle.lang.com.foodle.activity;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -13,6 +13,7 @@ import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
 
+import foodle.lang.com.foodle.R;
 import foodle.lang.com.foodle.fragments.FoodieFranment;
 import foodle.lang.com.foodle.fragments.HomeFragment;
 import foodle.lang.com.foodle.fragments.MyFragment;

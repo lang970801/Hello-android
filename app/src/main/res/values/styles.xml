@@ -15,7 +15,7 @@
     </style>
     <style name="bottom_banner" parent="@style/match_wrap">
         <item name="android:orientation">horizontal</item>
-        <item name="android:background">@color/gray</item>
+        <item name="android:background">@color/gray2</item>
 
     </style>
     <style name="banner">
