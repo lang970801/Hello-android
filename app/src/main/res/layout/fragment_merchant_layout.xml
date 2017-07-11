@@ -1,9 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    <TextView
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="我是商城界面"/>
-</LinearLayout>
+        android:layout_height="match_parent">
+        <EditText
+            android:id="@+id/merchan_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/merchan_et_text"
+            />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                android:id="@+id/merchan_cb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未定"
+                />
+            <CheckBox
+                android:id="@+id/merchan_cb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未定"
+                />
+            <CheckBox
+                android:id="@+id/merchan_cb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未定"
+                />
+            <CheckBox
+                android:id="@+id/merchan_cb4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="未定"
+                />
+        </LinearLayout>
+        <ListView
+            android:id="@+id/merchan_lv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </ListView>
+    </LinearLayout>
+</ScrollView>
