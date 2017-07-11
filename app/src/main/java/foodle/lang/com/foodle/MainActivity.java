@@ -68,7 +68,6 @@ public class MainActivity extends FragmentActivity implements ViewPager.OnPageCh
     public void onClick(View view) {
         switch (view.getId()){
             case R.id.home:
-                Toast.makeText(MainActivity.this,"点击了1", LENGTH_SHORT).show();
                 pager.setCurrentItem(0,true);
                 break;
             case  R.id.foodie:

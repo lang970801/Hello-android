@@ -23,19 +23,19 @@
 
         <RadioButton
             android:id="@+id/home"
-            style="@style/bottom_banner_item"
+            style="@style/bottom_banner_item1"
             android:text="@string/home"/>
         <RadioButton
             android:id="@+id/foodie"
-            style="@style/bottom_banner_item"
+            style="@style/bottom_banner_item2"
             android:text="@string/foodie"/>
         <RadioButton
             android:id="@+id/merchant"
-            style="@style/bottom_banner_item"
+            style="@style/bottom_banner_item3"
             android:text="@string/merchant"/>
         <RadioButton
             android:id="@+id/my"
-            style="@style/bottom_banner_item"
+            style="@style/bottom_banner_item4"
             android:text="@string/my"/>
     </RadioGroup>
 
