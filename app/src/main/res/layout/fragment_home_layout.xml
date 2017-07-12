@@ -33,13 +33,8 @@
         android:layout_height="0dp"
         android:layout_weight="5"
         android:orientation="vertical"
-        android:background="@color/colorAccent">
-     <ListView
-         android:id="@+id/home_lv"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent">
+        android:background="@mipmap/banner">
 
-     </ListView>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
@@ -53,7 +48,7 @@
             android:numColumns="4"
             android:columnWidth="100dp"
             android:stretchMode="columnWidth"
-            />
+            android:layout_gravity="center_vertical"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

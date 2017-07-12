@@ -108,6 +108,7 @@
             android:layout_weight="1"
             android:src="@mipmap/icon_my1"/>
         <TextView
+            android:id="@+id/shouData"
             style="@style/currency_w0"
             android:layout_weight="6"
             android:textSize="25sp"

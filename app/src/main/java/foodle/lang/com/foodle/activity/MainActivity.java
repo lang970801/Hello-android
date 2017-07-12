@@ -25,7 +25,7 @@ public class MainActivity extends FragmentActivity implements ViewPager.OnPageCh
     private RadioGroup rg;
     private ViewPager pager;
     private List<Fragment> fragment;
-    private String flag;
+    private String flag="MainActivity";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -56,15 +56,18 @@ public class MainActivity extends FragmentActivity implements ViewPager.OnPageCh
             }
             @Override
             public int getCount() {
-
                 return fragment.size();
             }
         });
         pager.setOnPageChangeListener(this);
-        rg.check(R.id.home);
+         flag=getIntent().getStringExtra("flag");
+        if ("logoinActivity".equals(flag)){
+            rg.check(R.id.my);
+            pager.setCurrentItem(3,true);
+        }else {
+            rg.check(R.id.home);
+        }
     }
-
-
     @Override
     public void onClick(View view) {
         switch (view.getId()){

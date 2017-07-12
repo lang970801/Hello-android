@@ -18,7 +18,6 @@ import java.util.Map;
 import foodle.lang.com.foodle.R;
 public class HomeFragment extends Fragment {
     private View view;
-    private ListView home_lv;
     private String mParam;
     private GridView gv;
     private ImageView img;
@@ -35,7 +34,6 @@ public class HomeFragment extends Fragment {
     }
     private void init(View view) {
         ininData();
-        home_lv=view.findViewById(R.id.home_lv);
         img=view.findViewById(R.id.home_img);
         gv=view.findViewById(R.id.gv_layout);
         simpleAdapter=new SimpleAdapter(view.getContext(),list,R.layout.item_gridview_layout,new String[]{"IMG","NAME"},new int[]{R.id.gv_img,R.id.gv_text});

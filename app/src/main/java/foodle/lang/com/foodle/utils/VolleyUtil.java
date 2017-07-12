@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 import foodle.lang.com.foodle.Interfaces.LoginCallBack;
+import foodle.lang.com.foodle.Interfaces.RegistCallBack;
 import foodle.lang.com.foodle.contents.UserContents;
 
 /**
@@ -27,26 +28,75 @@ public class VolleyUtil {
             instance=new VolleyUtil();
         }
     }
-
-    public static void  logoin(final String account, final String password, final LoginCallBack loginCallBack){
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, UserContents.registUrl, new Response.Listener<String>() {
+    public static void  logoin(final String name, final String password, final LoginCallBack loginCallBack){
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, UserContents.loginUrl, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-                loginCallBack.success(response);
-
+                if(response.equals(UserContents.ok)){
+                    loginCallBack.success(UserContents.ok);
+                }else{
+                    loginCallBack.errr(UserContents.error);
+                }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-              loginCallBack.errr(""+error);
+              loginCallBack.errr(error.toString());
             }
         }){
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
                 Map<String,String> map=new HashMap<String,String>();
-                map.put("account",account);
-                map.put("password",password);
-                return super.getParams();
+                map.put("name", name);
+                map.put("password", password);
+                return map;
+            }
+        };
+        stringRequest.setTag(VOLLEY_LOGO);
+        Myapplication.getrequestQueue().add(stringRequest);
+    }
+    public static void register(final String name, final String password,final String age,final String gender,final RegistCallBack registCallBack){
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, UserContents.registUrl, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+              registCallBack.registsuccess(response);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                registCallBack.registerrr(error.toString());
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String, String> map=new HashMap<String,String>();
+                map.put("name", name);
+                map.put("password", password);
+                map.put("age", age);
+                map.put("gender", gender);
+                return map;
+            }
+        };
+        stringRequest.setTag(VOLLEY_LOGO);
+        Myapplication.getrequestQueue().add(stringRequest);
+    }
+    public static void GainUserinfo(final String name, final RegistCallBack registCallBack){
+        StringRequest stringRequest=new StringRequest(Request.Method.POST, UserContents.userInfoUrl, new Response.Listener<String>() {
+            @Override
+            public void onResponse(String response) {
+                registCallBack.registsuccess(response);
+            }
+        }, new Response.ErrorListener() {
+            @Override
+            public void onErrorResponse(VolleyError error) {
+                registCallBack.registerrr(error.toString());
+            }
+        }){
+            @Override
+            protected Map<String, String> getParams() throws AuthFailureError {
+                HashMap<String, String> map=new HashMap<String,String>();
+                map.put("name", name);
+                return map;
             }
         };
         stringRequest.setTag(VOLLEY_LOGO);
