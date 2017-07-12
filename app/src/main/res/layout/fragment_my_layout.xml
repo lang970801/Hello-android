@@ -18,12 +18,19 @@
             android:orientation="vertical"
             android:layout_weight="5">
             <TextView
-                android:id="@+id/my_logoin_tv"
+                android:id="@+id/my_name_tv"
                 android:gravity="center"
                 style="@style/currency_h0"
                 android:layout_weight="1"
                 android:textSize="30sp"
                 android:text="@string/logor"/>
+            <TextView
+                android:id="@+id/my_logoin_tv"
+                android:gravity="center"
+                style="@style/currency_h0"
+                android:layout_weight="1"
+                android:textSize="30sp"
+                android:text="账户"/>
         </LinearLayout>
     </LinearLayout>
     <LinearLayout

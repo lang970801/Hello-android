@@ -31,7 +31,7 @@ public class MyFragment extends Fragment implements View.OnClickListener {
         logoin_tv=view.findViewById(R.id.my_logoin_tv);
         logoin_tv.setOnClickListener(this);
         userdata.setOnClickListener(this);
-
+//       getActivity().getIntent().getStringExtra("");
     }
 
     @Override
