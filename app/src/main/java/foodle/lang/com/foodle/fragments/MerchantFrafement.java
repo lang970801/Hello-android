@@ -22,6 +22,7 @@ import java.util.List;
 import foodle.lang.com.foodle.Adapters.MerchantAdapter;
 import foodle.lang.com.foodle.R;
 import foodle.lang.com.foodle.domain.ShouMerchant;
+import foodle.lang.com.foodle.utils.PopupWindowUtil;
 
 public class MerchantFrafement extends Fragment {
     private View view;
@@ -31,6 +32,8 @@ public class MerchantFrafement extends Fragment {
     private List<ShouMerchant> lists;
     private ShouMerchant shouMerchant;
     private ListView lv;
+    private PopupWindowUtil pop;
+    private Button bt1;
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         if (view==null){
@@ -41,6 +44,7 @@ public class MerchantFrafement extends Fragment {
     }
 
     private void init(View view) {
+        bt1=view.findViewById(R.id.merchan_bt1);
         //适配数据
         lv=view.findViewById(R.id.merchan_lv);
         shouMerchant=new ShouMerchant();
@@ -54,16 +58,7 @@ public class MerchantFrafement extends Fragment {
 
         //实现筛选栏功能
         final View popupView=getActivity().getLayoutInflater().inflate(R.layout.merchan_filter_column,null);
-        popupWindow=new PopupWindow(popupView, ActionBar.LayoutParams.WRAP_CONTENT, ActionBar.LayoutParams.WRAP_CONTENT,true);
-        popupWindow.setTouchable(true);
-        popupWindow.setOutsideTouchable(true);
-        popupWindow.setBackgroundDrawable(new BitmapDrawable(Resources.getSystem(),(Bitmap)null));
-        mButton=view.findViewById(R.id.merchan_bt1);
-        mButton.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View view) {
-                popupWindow.showAsDropDown(view);
-            }
-        });
+        pop=new PopupWindowUtil(popupView,bt1);
     }
 
     @Override
