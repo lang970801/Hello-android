@@ -14,14 +14,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/lodocentre"
-           android:gravity="center_horizontal"
+            android:gravity="center_horizontal"
             android:textSize="30sp"/>
     </LinearLayout>
     <ImageView
         android:layout_width="180dp"
         android:layout_height="180dp"
         android:src="@mipmap/logo"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_gravity="center_horizontal"/>
     <LinearLayout
         android:layout_width="match_parent"
@@ -29,6 +29,7 @@
         android:orientation="vertical"
         android:layout_marginTop="5dp">
         <LinearLayout
+            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
@@ -70,12 +71,12 @@
 
             <ImageView
                 android:id="@+id/login_zuce_img"
-                android:layout_width="120dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/zhuce"/>
             <ImageView
                 android:id="@+id/logoin_denglu_img"
-                android:layout_width="120dp"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/denglu"/>
         </LinearLayout>
@@ -85,22 +86,25 @@
             android:layout_height="wrap_content"
             android:text="@string/forget"
             android:layout_alignBottom ="@+id/logoin_denglu_img"
+            android:layout_marginRight="20dp"
             android:layout_gravity="right" />
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:gravity="center_horizontal">
+            android:gravity="center">
 
             <ImageView
-                android:layout_width="120dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
                 android:src="@mipmap/qq"/>
             <ImageView
-                android:layout_width="120dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="60dp"
                 android:layout_height="wrap_content"
                 android:src="@mipmap/weixin"/>
         </LinearLayout>
 
-</LinearLayout>
+    </LinearLayout>
 </LinearLayout>

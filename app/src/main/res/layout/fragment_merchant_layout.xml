@@ -18,35 +18,32 @@
             android:orientation="horizontal"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
-            <CheckBox
-                android:id="@+id/merchan_cb1"
+            <Button
+                android:id="@+id/merchan_bt1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未定"
-                />
-            <CheckBox
-                android:id="@+id/merchan_cb2"
+                android:text="@string/weidin"/>
+            <Button
+                android:id="@+id/merchan_bt2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未定"
-                />
-            <CheckBox
-                android:id="@+id/merchan_cb3"
+                android:text="@string/weidin"/>
+            <Button
+                android:id="@+id/merchan_bt3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未定"
-                />
-            <CheckBox
-                android:id="@+id/merchan_cb4"
+                android:text="@string/weidin"/>
+            <Button
+                android:id="@+id/merchan_bt4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="未定"
-                />
+                android:text="@string/weidin"/>
         </LinearLayout>
         <ListView
             android:id="@+id/merchan_lv"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            >
         </ListView>
     </LinearLayout>
 </ScrollView>
